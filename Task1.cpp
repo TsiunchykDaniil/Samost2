@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 using namespace std;
 
 int* input(int size)
@@ -6,7 +6,7 @@ int* input(int size)
     int* arr = new int[size];
     for (int i = 0; i < size; i++)
     {
-        arr[i] = rand() % size - 2; //Чтобы элемет имел равный шанс совпасть на всём массиве, а не гарантированно вначале
+        arr[i] = rand() % 10 - 5; 
         cout << arr[i] << " ";
     }
     return arr;
@@ -14,9 +14,11 @@ int* input(int size)
 
 void firstI(int* arr, int n)
 {
+    cout << endl << "Введите число" << endl;
+    int o; cin >> o;
     for (int i = 0; i < n; i++)
-        if (arr[i] == i) {
-            cout << endl << "Первый элемент совпавший со своим индексом = "<<arr[i];
+        if (arr[i] == o) {
+            cout << endl << "Первый совпавший элемент имеет индекс = " << i;
             break;
         }
 }
